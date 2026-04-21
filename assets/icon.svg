@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 476 290">
+    <style>
+        .f { fill: #111; }
+        .s { fill: none; stroke: #111; stroke-linecap: round; }
+        @media (prefers-color-scheme: dark) {
+            .f { fill: #fff; }
+            .s { stroke: #fff; }
+        }
+    </style>
+    <rect class="f" x="208" y="252" width="72" height="20" rx="10"/>
+    <path class="s" stroke-width="40" d="M118 262C118 168.667 158 122 238 122C318 122 358 168.667 358 262"/>
+    <path class="s" stroke-width="32" d="M66 262C66 132 123.333 67 238 67C352.667 67 410 132 410 262"/>
+    <path class="s" stroke-width="24" d="M10 262C10 94 86 10 238 10C390 10 466 94 466 262"/>
+</svg>

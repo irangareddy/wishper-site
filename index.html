@@ -3,22 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Wishper — Stop typing. Start speaking.</title>
-    <meta name="description" content="Voice-to-text that runs entirely on your Mac. Hold a hotkey, speak, your words land where the cursor is. Free. Apple Silicon only.">
+    <title>Wishper — Free, open-source Wispr Flow alternative for Mac</title>
+    <meta name="description" content="Free, open-source Wispr Flow alternative for macOS. 100% on-device voice-to-text powered by MLX on Apple Silicon. Hold a hotkey, speak, your words land in any app. No accounts, no subscription, no tracking.">
+    <meta name="keywords" content="Wispr Flow alternative, free Wispr Flow, open source dictation Mac, voice to text macOS, Mac dictation app, on-device speech recognition, MLX dictation, free voice typing Mac, Apple Silicon dictation, Whisper alternative Mac">
 
-    <meta property="og:title" content="Wishper — Stop typing. Start speaking.">
-    <meta property="og:description" content="Voice-to-text that runs entirely on your Mac. Free.">
+    <link rel="canonical" href="https://wishper.irangareddy.in/">
+
+    <meta property="og:title" content="Wishper — Free, open-source Wispr Flow alternative for Mac">
+    <meta property="og:description" content="100% on-device voice-to-text for macOS. Free, open source, no subscription.">
     <meta property="og:url" content="https://wishper.irangareddy.in/">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://wishper.irangareddy.in/assets/og.png">
+    <meta property="og:site_name" content="Wishper">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Wishper — Free Wispr Flow alternative for Mac">
+    <meta name="twitter:description" content="100% on-device voice-to-text for macOS. Free and open source.">
     <meta name="theme-color" content="#0a0a0c">
 
-    <link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            { "@type": "Question", "name": "Is my voice really private?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Audio never leaves your Mac. Wishper makes zero network calls for dictation — no servers, no accounts, no analytics. Verify with Little Snitch or Activity Monitor." } },
+            { "@type": "Question", "name": "Does Wishper work offline?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. After the first launch downloads the models, Wishper works identically offline. The only network activity is a once-per-day update check." } },
+            { "@type": "Question", "name": "Does Wishper run on Intel Macs?", "acceptedAnswer": { "@type": "Answer", "text": "No. Wishper is Apple Silicon only (M1, M2, M3, M4). It uses MLX for on-device inference which requires Apple Silicon." } },
+            { "@type": "Question", "name": "How much disk space does Wishper need?", "acceptedAnswer": { "@type": "Answer", "text": "About 2 GB for the speech-recognition and cleanup models, downloaded on first launch." } },
+            { "@type": "Question", "name": "Which apps does Wishper work with?", "acceptedAnswer": { "@type": "Answer", "text": "Any app with a text field. Slack, Mail, Notes, Messages, Safari, Chrome, VS Code, Xcode, Terminal and more." } },
+            { "@type": "Question", "name": "How is Wishper different from Wispr Flow?", "acceptedAnswer": { "@type": "Answer", "text": "Wishper is free, open source (MIT), and runs 100% on-device. Wispr Flow is paid and processes voice in the cloud. Same hold-to-talk experience, different trust model." } },
+            { "@type": "Question", "name": "Can I change the hotkey?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Settings → Hotkey. Default is Right Command; any non-conflicting combination works." } },
+            { "@type": "Question", "name": "How does Wishper get updates?", "acceptedAnswer": { "@type": "Answer", "text": "Auto-checks once a day via Sparkle. EdDSA-signed so only legitimate builds install. Manual check available in Settings → Updates." } }
+        ]
+    }
+    </script>
 
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Wishper",
+        "alternateName": "Wishper for Mac",
+        "description": "Free, open-source Wispr Flow alternative for macOS. Voice-to-text that runs 100% on-device via MLX on Apple Silicon.",
+        "applicationCategory": "ProductivityApplication",
+        "operatingSystem": "macOS 15+",
+        "processorRequirements": "Apple Silicon (M1/M2/M3/M4)",
+        "downloadUrl": "https://github.com/irangareddy/wishper-app/releases/latest/download/Wishper.dmg",
+        "url": "https://wishper.irangareddy.in",
+        "softwareHelp": "https://github.com/irangareddy/wishper-app",
+        "license": "https://github.com/irangareddy/wishper-app/blob/main/LICENSE",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "author": {
+            "@type": "Person",
+            "name": "Ranga Reddy Nukala",
+            "url": "https://github.com/irangareddy"
+        },
+        "featureList": [
+            "100% on-device voice-to-text",
+            "Hold-to-talk hotkey dictation",
+            "Works in any macOS text field",
+            "LLM-powered filler word cleanup",
+            "No accounts, no network, no tracking",
+            "Auto-updates via Sparkle"
+        ]
+    }
+    </script>
+
+    <!-- Primary: SVG favicon (auto-switches light/dark via prefers-color-scheme).
+         Fallback: PNG for browsers without SVG favicon support.
+         iOS home screen: the colorful rounded-rect app icon (PNGs need fills). -->
+    <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+    <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+    <link rel="mask-icon" href="assets/icon.svg" color="#f5a25c">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="preload" as="image" href="assets/hero.webp" fetchpriority="high">
+
+    <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Display: Instrument Serif (editorial italic — drives hero headlines). -->
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <!-- Body + small caps: Satoshi (Fontshare, free commercial). Labels and
+         meta use Satoshi at uppercase with tight tracking instead of a
+         separate mono face — simpler stack, faster load. -->
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
 
     <style>
         :root {
@@ -53,7 +125,7 @@
         }
 
         body {
-            font-family: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
             font-weight: 400;
             background: var(--bg);
             color: var(--fg);
@@ -129,26 +201,34 @@
             padding: 0 36px;
         }
 
+        /* Full-viewport-width sticky bar. Frost background covers the entire
+           width of the screen when scrolled (previously it was constrained
+           to the .shell's 1180px max-width and clipped on wide monitors). */
         header {
             position: sticky;
             top: 0;
             z-index: 50;
+            width: 100%;
+            background: transparent;
+            border-bottom: 1px solid transparent;
+            transition: background 0.4s var(--ease-soft),
+                        backdrop-filter 0.4s var(--ease-soft),
+                        border-color 0.4s var(--ease-soft);
+        }
+
+        .header-inner {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 20px 36px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 20px 36px;
-            margin: 0 -36px;
             font-size: 14px;
             letter-spacing: -0.01em;
-            background: transparent;
-            transition: background 0.4s var(--ease-soft),
-                        backdrop-filter 0.4s var(--ease-soft),
-                        border-color 0.4s var(--ease-soft),
-                        padding 0.3s var(--ease-soft);
-            border-bottom: 1px solid transparent;
         }
 
-        /* When scrolled, header gains a frosted backdrop — CSS-only via scroll-timeline */
+        /* When scrolled, header gains a frosted backdrop — CSS-only via scroll-timeline.
+           Applies to the full-width <header>, so the blur reaches edge-to-edge. */
         @supports (animation-timeline: scroll(root)) {
             header {
                 animation: header-frost linear both;
@@ -161,18 +241,27 @@
                     backdrop-filter: saturate(160%) blur(18px);
                     -webkit-backdrop-filter: saturate(160%) blur(18px);
                     border-bottom-color: var(--border);
-                    padding-top: 14px;
-                    padding-bottom: 14px;
                 }
             }
         }
 
         .wordmark {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
             font-family: 'Instrument Serif', serif;
             font-size: 26px;
             font-style: italic;
             letter-spacing: -0.01em;
             color: var(--fg);
+            text-decoration: none;
+        }
+
+        .wordmark .mark {
+            display: block;
+            height: 20px;
+            width: auto;
+            color: currentColor;
         }
 
         .wordmark .dot {
@@ -208,29 +297,89 @@
             transform: translateY(0);
         }
 
-        /* ── hero ───────────────────────────────── */
-        .hero {
-            padding: 80px 0 140px;
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 60px;
-            align-items: start;
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        @media (min-width: 960px) {
-            .hero {
-                grid-template-columns: 1.15fr 0.85fr;
-                gap: 40px;
-                padding: 100px 0 160px;
-                align-items: center;
-            }
+        .icon-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            color: var(--fg-muted);
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            transition: color 0.35s var(--ease-soft),
+                        background 0.35s var(--ease-soft),
+                        border-color 0.35s var(--ease-soft),
+                        transform 0.35s var(--ease-out-expo);
+        }
+
+        .icon-link:hover {
+            color: var(--fg);
+            background: var(--bg-elev);
+            border-color: var(--fg-ghost);
+            transform: translateY(-1px);
+        }
+
+        .icon-link:active { transform: translateY(0); }
+
+        .icon-link svg { width: 16px; height: 16px; }
+
+        /* ── hero ───────────────────────────────── */
+        .hero {
+            position: relative;
+            padding: 120px 0 180px;
+            min-height: 78vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            isolation: isolate;
+        }
+
+        /* Full-bleed background that escapes the .shell max-width.
+           The new hero image is already dark on the left with the
+           MacBook in the bottom-right, so the overlay is light —
+           just a subtle vertical scrim at the top so the sticky
+           header doesn't sit directly on bright image areas. */
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: calc(50% - 50vw);
+            right: calc(50% - 50vw);
+            z-index: -1;
+            background-image:
+                linear-gradient(
+                    180deg,
+                    rgba(10, 10, 12, 0.35) 0%,
+                    rgba(10, 10, 12, 0.15) 30%,
+                    rgba(10, 10, 12, 0) 70%
+                ),
+                url("assets/hero.webp");
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            border-bottom: 1px solid var(--border);
+        }
+
+        @media (min-width: 760px) {
+            .hero { padding: 140px 0 200px; }
+        }
+
+        .hero-text {
+            max-width: 560px;
         }
 
         .eyebrow {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            font-family: 'JetBrains Mono', monospace;
+            font-family: 'Satoshi', sans-serif;
             font-size: 12px;
             letter-spacing: 0.08em;
             color: var(--fg-muted);
@@ -257,14 +406,20 @@
             font-weight: 400;
             font-size: clamp(48px, 9vw, 96px);
             letter-spacing: -0.02em;
-            line-height: 0.98;
+            /* 1.08 gives Instrument Serif's italic descenders room to render —
+               tight 0.98 line-height clips the `g` tail on "speaking." */
+            line-height: 1.08;
             margin: 0 0 32px;
             color: var(--fg);
         }
 
-        /* Per-word hero reveal — each word rises independently for a smooth cascade */
+        /* Per-word hero reveal — each word rises independently for a smooth cascade.
+           `overflow: visible` + `padding-bottom` ensure the inline-block boxes
+           don't clip italic descenders during or after the animation. */
         h1 .word {
             display: inline-block;
+            overflow: visible;
+            padding-bottom: 0.12em;
             opacity: 0;
             transform: translateY(20px);
             animation: word-rise 1.2s var(--ease-out-expo) forwards;
@@ -380,34 +535,45 @@
         .btn-primary:hover svg { transform: translateY(3px); }
 
         .meta-inline {
-            font-family: 'JetBrains Mono', monospace;
+            font-family: 'Satoshi', sans-serif;
             font-size: 12px;
             letter-spacing: 0.01em;
             color: var(--fg-faint);
         }
 
-        /* ── hero visual: live waveform ──────────── */
+        .origin-note {
+            display: block;
+            margin-top: 18px;
+            font-family: 'Instrument Serif', serif;
+            font-style: italic;
+            font-size: 16px;
+            color: var(--fg-muted);
+            letter-spacing: 0.005em;
+        }
+
+        /* ── hero visual: polished mockup ────────── */
         .visual {
             position: relative;
             aspect-ratio: 4 / 3;
             border-radius: 24px;
-            background:
-                linear-gradient(135deg, rgba(245, 162, 92, 0.08), rgba(106, 164, 255, 0.08)),
-                var(--bg-elev);
-            border: 1px solid var(--border);
             overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             opacity: 0;
-            animation: rise 1.1s cubic-bezier(0.2, 0.8, 0.2, 1) 0.5s forwards;
+            animation: rise 1.1s var(--ease-out-expo) 0.5s forwards;
         }
 
+        .visual img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Soft warm glow layered on top of the image to tie it to the page palette */
         .visual::after {
             content: "";
             position: absolute;
             inset: 0;
-            background: radial-gradient(circle at 30% 20%, rgba(245, 162, 92, 0.14), transparent 55%);
+            background: radial-gradient(circle at 30% 15%, rgba(245, 162, 92, 0.10), transparent 55%);
             pointer-events: none;
         }
 
@@ -416,7 +582,7 @@
             bottom: 22px;
             left: 24px;
             right: 24px;
-            font-family: 'JetBrains Mono', monospace;
+            font-family: 'Satoshi', sans-serif;
             font-size: 11px;
             color: var(--fg-faint);
             letter-spacing: 0.03em;
@@ -495,7 +661,7 @@
         section + section { border-top: 1px solid var(--border); }
 
         .section-label {
-            font-family: 'JetBrains Mono', monospace;
+            font-family: 'Satoshi', sans-serif;
             font-size: 11px;
             letter-spacing: 0.12em;
             text-transform: uppercase;
@@ -513,6 +679,48 @@
             margin: 0 0 60px;
             max-width: 640px;
             color: var(--fg);
+        }
+
+        /* ── showcase ───────────────────────────── */
+        .showcase {
+            padding: 100px 0 60px;
+            text-align: center;
+        }
+
+        .showcase .section-head {
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 0;
+        }
+
+        .showcase .subcopy {
+            max-width: 520px;
+            margin: 20px auto 52px;
+            color: var(--fg-muted);
+            font-size: 17px;
+            line-height: 1.55;
+        }
+
+        .showcase figure {
+            margin: 0;
+            padding: 0;
+            max-width: 1040px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* No card chrome — the screenshot's own window frame is the only
+           frame. Dark-on-dark means it bleeds naturally into the page. */
+        .showcase .screenshot {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* ── why this exists ────────────────────── */
+        .why-exists {
+            padding: 100px 0;
         }
 
         /* ── how it works ───────────────────────── */
@@ -541,7 +749,7 @@
         }
 
         .step .n {
-            font-family: 'JetBrains Mono', monospace;
+            font-family: 'Satoshi', sans-serif;
             font-size: 12px;
             color: var(--fg-faint);
             letter-spacing: 0.08em;
@@ -607,6 +815,81 @@
             line-height: 1.55;
         }
 
+        /* ── faq ────────────────────────────────── */
+        .faq {
+            padding: 100px 0 60px;
+        }
+
+        .faq .list {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .faq details {
+            border-top: 1px solid var(--border);
+            padding: 24px 0;
+        }
+
+        .faq details:last-of-type {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .faq summary {
+            list-style: none;
+            cursor: pointer;
+            font-family: 'Instrument Serif', serif;
+            font-size: 22px;
+            letter-spacing: -0.01em;
+            line-height: 1.3;
+            color: var(--fg);
+            padding-right: 40px;
+            position: relative;
+            transition: color 0.25s var(--ease-soft);
+        }
+
+        .faq summary::-webkit-details-marker { display: none; }
+
+        .faq summary::after {
+            content: "+";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-family: 'Satoshi', sans-serif;
+            font-size: 22px;
+            font-weight: 300;
+            color: var(--fg-muted);
+            transition: transform 0.3s var(--ease-out-expo), color 0.25s var(--ease-soft);
+        }
+
+        .faq details[open] summary::after {
+            content: "–";
+            color: var(--fg);
+        }
+
+        .faq summary:hover { color: var(--fg); }
+        .faq summary:hover::after { color: var(--fg); }
+
+        .faq details[open] summary { color: var(--fg); }
+
+        .faq .answer {
+            margin: 16px 0 0;
+            color: var(--fg-muted);
+            font-size: 16px;
+            line-height: 1.6;
+            max-width: 640px;
+        }
+
+        .faq .answer a {
+            color: var(--fg);
+            text-decoration: none;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1px;
+            transition: border-color 0.2s var(--ease-soft);
+        }
+
+        .faq .answer a:hover { border-bottom-color: var(--fg-muted); }
+
         /* ── final CTA ──────────────────────────── */
         .final {
             padding: 120px 0 140px;
@@ -639,7 +922,7 @@
         footer {
             padding: 40px 0 56px;
             border-top: 1px solid var(--border);
-            font-family: 'JetBrains Mono', monospace;
+            font-family: 'Satoshi', sans-serif;
             font-size: 12px;
             color: var(--fg-faint);
             display: flex;
@@ -658,6 +941,15 @@
         footer a:hover { color: var(--fg); }
 
         footer .links { display: flex; gap: 20px; flex-wrap: wrap; }
+
+        footer .trademark-note {
+            margin-top: 8px;
+            font-size: 11px;
+            color: var(--fg-faint);
+            max-width: 520px;
+            line-height: 1.5;
+            letter-spacing: 0.01em;
+        }
 
         /* ── animations ─────────────────────────── */
         @keyframes rise {
@@ -714,18 +1006,41 @@
 <body>
     <div class="stage"><div class="grain"></div></div>
 
-    <div class="shell">
-        <header>
-            <a href="/" class="wordmark">wishper<span class="dot">.</span></a>
-            <a href="https://github.com/irangareddy/wishper-app/releases/latest/download/Wishper.dmg" class="nav-cta">
-                Download
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><path d="M6 8L2.5 4.5l.7-.7L6 6.6l2.8-2.8.7.7L6 8z"/></svg>
+    <header>
+        <div class="header-inner">
+            <a href="/" class="wordmark">
+                <svg class="mark" viewBox="0 0 476 290" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <rect x="208" y="252" width="72" height="20" rx="10" fill="currentColor"/>
+                    <path d="M118 262C118 168.667 158 122 238 122C318 122 358 168.667 358 262"
+                          stroke="currentColor" stroke-width="40" stroke-linecap="round"/>
+                    <path d="M66 262C66 132 123.333 67 238 67C352.667 67 410 132 410 262"
+                          stroke="currentColor" stroke-width="32" stroke-linecap="round"/>
+                    <path d="M10 262C10 94 86 10 238 10C390 10 466 94 466 262"
+                          stroke="currentColor" stroke-width="24" stroke-linecap="round"/>
+                </svg>
+                wishper<span class="dot">.</span>
             </a>
-        </header>
+            <div class="nav-right">
+                <a href="https://github.com/irangareddy/wishper-app"
+                   class="icon-link"
+                   aria-label="Source on GitHub"
+                   title="View source on GitHub">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.9.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.47.11-3.07 0 0 .97-.31 3.18 1.18a11.02 11.02 0 015.79 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.6.23 2.78.11 3.07.74.81 1.19 1.83 1.19 3.09 0 4.43-2.69 5.4-5.25 5.68.41.35.78 1.05.78 2.11 0 1.53-.01 2.76-.01 3.13 0 .3.21.66.79.55A11.5 11.5 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/>
+                    </svg>
+                </a>
+                <a href="https://github.com/irangareddy/wishper-app/releases/latest/download/Wishper.dmg" class="nav-cta">
+                    Download
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><path d="M6 8L2.5 4.5l.7-.7L6 6.6l2.8-2.8.7.7L6 8z"/></svg>
+                </a>
+            </div>
+        </div>
+    </header>
 
+    <div class="shell">
         <section class="hero">
             <div class="hero-text">
-                <div class="eyebrow">on-device · apple silicon</div>
+                <div class="eyebrow">free · open-source · on-device</div>
                 <h1>
                     <span class="word w1">Stop</span> <span class="word w2">typing.</span><br>
                     <em><span class="word w3">Start</span> <span class="word w4">speaking.</span></em>
@@ -736,21 +1051,38 @@
                         Download for macOS
                         <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 10.67 3.77 6.44l.94-.94L8 8.8l3.29-3.3.94.94L8 10.67z"/><path d="M3 12h10v1.5H3V12z"/></svg>
                     </a>
-                    <span class="meta-inline">v0.5.3 · macOS 15+ · free</span>
+                    <span class="meta-inline">macOS 15+ · Apple Silicon</span>
                 </div>
+                <span class="origin-note">A free, open-source alternative to Wispr Flow.</span>
             </div>
+        </section>
 
-            <div class="visual" aria-hidden="true">
-                <div class="wave">
-                    <span></span><span></span><span></span><span></span><span></span>
-                    <span></span><span></span><span></span><span></span><span></span>
-                    <span></span><span></span><span></span><span></span><span></span>
-                </div>
-                <div class="caption">
-                    <span class="led">recording</span>
-                    <span>→ paste</span>
-                </div>
-            </div>
+        <section class="showcase" aria-labelledby="showcase-label">
+            <p class="section-label reveal" id="showcase-label">See Wishper</p>
+            <h2 class="section-head reveal">Your history. Your Mac.</h2>
+            <p class="subcopy reveal">
+                Every transcript you dictate, your weekly streak, words spoken, apps used — all of it searchable, all of it local. Nothing syncs. Nothing uploads.
+            </p>
+            <figure class="reveal">
+                <img src="assets/app_view.webp"
+                     alt="Wishper showing a list of recent transcripts with stats: 3-week streak, 127 average WPM, 6.2K total words, 13 apps used."
+                     class="screenshot"
+                     width="1544" height="1328"
+                     loading="lazy">
+            </figure>
+        </section>
+
+        <section class="why-exists" aria-labelledby="why-exists-label">
+            <p class="section-label reveal" id="why-exists-label">Why this exists</p>
+            <h2 class="section-head reveal">
+                I wanted Wispr Flow<br>without the subscription.
+            </h2>
+            <p class="lead reveal" style="max-width: 640px;">
+                Wispr Flow is a great dictation app, but it's paid, and it sends your voice to a cloud service.
+                Wishper is a free, open-source alternative that does the same core thing — hold a hotkey, speak,
+                your words land in any app — but runs entirely on your Mac. No accounts, no subscription,
+                no servers. Your voice never leaves the device.
+            </p>
         </section>
 
         <section class="how">
@@ -797,6 +1129,52 @@
             </div>
         </section>
 
+        <section class="faq" aria-labelledby="faq-label">
+            <p class="section-label reveal" id="faq-label">FAQ</p>
+            <h2 class="section-head reveal">Questions, answered.</h2>
+            <div class="list reveal">
+                <details>
+                    <summary>Is my voice really private?</summary>
+                    <p class="answer">Yes. Audio never leaves your Mac. Wishper makes zero network calls for dictation — no servers, no accounts, no analytics. Verify it yourself with Little Snitch or Activity Monitor.</p>
+                </details>
+
+                <details>
+                    <summary>Does it work offline?</summary>
+                    <p class="answer">Yes. After the first launch downloads the models, you can disconnect your Wi-Fi and Wishper works exactly the same. The only time Wishper touches the network is checking for app updates once a day.</p>
+                </details>
+
+                <details>
+                    <summary>Does it run on Intel Macs?</summary>
+                    <p class="answer">No. Wishper is Apple Silicon only — M1, M2, M3, M4. It uses <a href="https://github.com/ml-explore/mlx">MLX</a> for on-device inference, which doesn't support Intel Macs.</p>
+                </details>
+
+                <details>
+                    <summary>How much disk space does it need?</summary>
+                    <p class="answer">About 2&nbsp;GB for the speech-recognition and cleanup models, downloaded on first launch. They live in <code>~/Library/Application Support/Wishper/</code>.</p>
+                </details>
+
+                <details>
+                    <summary>Which apps does Wishper work with?</summary>
+                    <p class="answer">Any app where you can type into a text field. Slack, Mail, Notes, Messages, Safari, Chrome, VS&nbsp;Code, Xcode, Terminal — all tested. If your cursor is blinking in it, Wishper can type there.</p>
+                </details>
+
+                <details>
+                    <summary>How is Wishper different from Wispr Flow?</summary>
+                    <p class="answer">Wishper is free, open source (MIT), and runs 100% on-device. Wispr Flow is paid and processes your voice in the cloud. Same core hold-to-talk experience — different trust model.</p>
+                </details>
+
+                <details>
+                    <summary>Can I change the hotkey?</summary>
+                    <p class="answer">Yes. Settings → Hotkey. Default is Right Command (hold to dictate). Pick any combination that doesn't conflict with your existing macOS shortcuts.</p>
+                </details>
+
+                <details>
+                    <summary>How do I get updates?</summary>
+                    <p class="answer">Wishper auto-checks for updates once a day via <a href="https://sparkle-project.org">Sparkle</a>. Releases are EdDSA-signed so only legitimate builds can install. You can also trigger a check manually from Settings → Updates.</p>
+                </details>
+            </div>
+        </section>
+
         <section class="final">
             <h2 class="reveal">Ready to <em>stop typing</em>?</h2>
             <a href="https://github.com/irangareddy/wishper-app/releases/latest/download/Wishper.dmg" class="btn-primary reveal">
@@ -806,7 +1184,12 @@
         </section>
 
         <footer>
-            <div>© 2026 Ranga Reddy Nukala</div>
+            <div>
+                © 2026 Ranga Reddy Nukala
+                <div class="trademark-note">
+                    Wispr Flow is a trademark of its respective owner. Wishper is not affiliated with or endorsed by Wispr.
+                </div>
+            </div>
             <div class="links">
                 <a href="https://github.com/irangareddy/wishper-app">github</a>
                 <a href="https://github.com/irangareddy">@irangareddy</a>
