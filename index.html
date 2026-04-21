@@ -30,7 +30,7 @@
             { "@type": "Question", "name": "Does Wishper run on Intel Macs?", "acceptedAnswer": { "@type": "Answer", "text": "No. Wishper is Apple Silicon only (M1, M2, M3, M4). It uses MLX for on-device inference which requires Apple Silicon." } },
             { "@type": "Question", "name": "How much disk space does Wishper need?", "acceptedAnswer": { "@type": "Answer", "text": "About 2 GB for the speech-recognition and cleanup models, downloaded on first launch." } },
             { "@type": "Question", "name": "Which apps does Wishper work with?", "acceptedAnswer": { "@type": "Answer", "text": "Any app with a text field. Slack, Mail, Notes, Messages, Safari, Chrome, VS Code, Xcode, Terminal and more." } },
-            { "@type": "Question", "name": "How is Wishper different from Wispr Flow?", "acceptedAnswer": { "@type": "Answer", "text": "Wishper is free, open source (MIT), and runs 100% on-device. Wispr Flow is paid and processes voice in the cloud. Same hold-to-talk experience, different trust model." } },
+            { "@type": "Question", "name": "How is Wishper different from Wispr Flow?", "acceptedAnswer": { "@type": "Answer", "text": "Wispr Flow has a free tier capped at 2,000 words per week on Mac and $15/month for unlimited; voice is processed in the cloud and synced across Mac, Windows, iPhone, and Android. Wishper is free and unlimited, Apple Silicon only, runs 100% on-device via MLX, and does not sync across devices. Same hold-to-talk feel, different trade-offs." } },
             { "@type": "Question", "name": "Can I change the hotkey?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Settings → Hotkey. Default is Right Command; any non-conflicting combination works." } },
             { "@type": "Question", "name": "How does Wishper get updates?", "acceptedAnswer": { "@type": "Answer", "text": "Auto-checks once a day via Sparkle. EdDSA-signed so only legitimate builds install. Manual check available in Settings → Updates." } }
         ]
@@ -1075,13 +1075,17 @@
         <section class="why-exists" aria-labelledby="why-exists-label">
             <p class="section-label reveal" id="why-exists-label">Why this exists</p>
             <h2 class="section-head reveal">
-                I wanted Wispr Flow<br>without the subscription.
+                I wanted Wispr Flow,<br>but local.
             </h2>
             <p class="lead reveal" style="max-width: 640px;">
-                Wispr Flow is a great dictation app, but it's paid, and it sends your voice to a cloud service.
-                Wishper is a free, open-source alternative that does the same core thing — hold a hotkey, speak,
-                your words land in any app — but runs entirely on your Mac. No accounts, no subscription,
-                no servers. Your voice never leaves the device.
+                Wispr Flow is great — 4× faster than typing, AI-polished output, cross-platform.
+                But free use caps at 2,000 words a week on Mac, unlimited costs $15/month, and every
+                transcription runs on their servers.
+            </p>
+            <p class="lead reveal" style="max-width: 640px; margin-top: 16px;">
+                Wishper is the unlimited, on-device version. Same hold-to-talk feel — but all inference
+                runs locally via MLX on Apple Silicon. No word caps, no subscription, no cloud. Your voice
+                never leaves the Mac. Trade-off: Apple Silicon only, no cross-device sync.
             </p>
         </section>
 
@@ -1160,7 +1164,7 @@
 
                 <details>
                     <summary>How is Wishper different from Wispr Flow?</summary>
-                    <p class="answer">Wishper is free, open source (MIT), and runs 100% on-device. Wispr Flow is paid and processes your voice in the cloud. Same core hold-to-talk experience — different trust model.</p>
+                    <p class="answer">Wispr Flow has a free tier capped at 2,000 words per week on Mac (1,000 on iPhone) and $15/month for unlimited; it processes voice in the cloud and syncs across Mac, Windows, iPhone, and Android. Wishper is free and unlimited, runs 100% on-device via MLX, and is Apple Silicon only — no iPhone, no Windows, no cross-device sync. Same hold-to-talk experience; different trade-offs on privacy, cost, and platform reach.</p>
                 </details>
 
                 <details>
